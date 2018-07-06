@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CF8BB1A8-E6C7-4E5B-9B8C-87C0E0962BF0}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="VisualGDBPackageDefinitions">
+    <ToolchainID>com.sysprogs.toolchain.default-gcc</ToolchainID>
+  </PropertyGroup>
+  <ImportGroup Label="VisualGDBFindComponents">
+    <Import Project="$(LOCALAPPDATA)\VisualGDB\FindComponents.props" />
+  </ImportGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeIncludeSearchPath>$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include\c++\4.8;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include\x86_64-linux-gnu\c++\4.8;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include\c++\4.8\backward;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0001\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0003\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0002\include-fixed;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include\x86_64-linux-gnu;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include;config;src\core;src\os\unix;src\event;src\http;src\http\modules;src\mail;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(ProjectDir)\gcc_Debug.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
+    <NMakeOutput>$(ProjectDir)nginx-Debug.vgdbsettings</NMakeOutput>
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <NMakePreprocessorDefinitions>__VisualGDB_CFG_Debug;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeIncludeSearchPath>$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include\c++\4.8;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include\x86_64-linux-gnu\c++\4.8;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include\c++\4.8\backward;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0001\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0003\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0002\include-fixed;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include\x86_64-linux-gnu;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.1.184\0000\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(ProjectDir)\gcc_Release.h;$(VISUALGDB_DIR)\gcc_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakePreprocessorDefinitions>__VisualGDB_CFG_Release;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /rebuild "$(ProjectPath)" "/solution:$(SolutionPath)"  "/config:$(Configuration)" "/platform:$(Platform)"</NMakeReBuildCommandLine>
+    <NMakeOutput>$(ProjectDir)nginx-Release.vgdbsettings</NMakeOutput>
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="config\ngx_modules.c" />
+    <ClCompile Include="src\core\nginx.c" />
+    <ClCompile Include="src\core\ngx_array.c" />
+    <ClCompile Include="src\core\ngx_buf.c" />
+    <ClCompile Include="src\core\ngx_conf_file.c" />
+    <ClCompile Include="src\core\ngx_connection.c" />
+    <ClCompile Include="src\core\ngx_cpuinfo.c" />
+    <ClCompile Include="src\core\ngx_crc32.c" />
+    <ClCompile Include="src\core\ngx_crypt.c" />
+    <ClCompile Include="src\core\ngx_cycle.c" />
+    <ClCompile Include="src\core\ngx_file.c" />
+    <ClCompile Include="src\core\ngx_hash.c" />
+    <ClCompile Include="src\core\ngx_inet.c" />
+    <ClCompile Include="src\core\ngx_list.c" />
+    <ClCompile Include="src\core\ngx_log.c" />
+    <ClCompile Include="src\core\ngx_md5.c" />
+    <ClCompile Include="src\core\ngx_murmurhash.c" />
+    <ClCompile Include="src\core\ngx_open_file_cache.c" />
+    <ClCompile Include="src\core\ngx_output_chain.c" />
+    <ClCompile Include="src\core\ngx_palloc.c" />
+    <ClCompile Include="src\core\ngx_parse.c" />
+    <ClCompile Include="src\core\ngx_queue.c" />
+    <ClCompile Include="src\core\ngx_radix_tree.c" />
+    <ClCompile Include="src\core\ngx_rbtree.c" />
+    <ClCompile Include="src\core\ngx_regex.c" />
+    <ClCompile Include="src\core\ngx_resolver.c" />
+    <ClCompile Include="src\core\ngx_shmtx.c" />
+    <ClCompile Include="src\core\ngx_slab.c" />
+    <ClCompile Include="src\core\ngx_spinlock.c" />
+    <ClCompile Include="src\core\ngx_string.c" />
+    <ClCompile Include="src\core\ngx_times.c" />
+    <ClCompile Include="src\event\modules\ngx_epoll_module.c" />
+    <ClCompile Include="src\event\ngx_event.c" />
+    <ClCompile Include="src\event\ngx_event_accept.c" />
+    <ClCompile Include="src\event\ngx_event_busy_lock.c" />
+    <ClCompile Include="src\event\ngx_event_connect.c" />
+    <ClCompile Include="src\event\ngx_event_mutex.c" />
+    <ClCompile Include="src\event\ngx_event_pipe.c" />
+    <ClCompile Include="src\event\ngx_event_posted.c" />
+    <ClCompile Include="src\event\ngx_event_timer.c" />
+    <ClCompile Include="src\http\modules\ngx_http_access_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_auth_basic_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_autoindex_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_browser_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_charset_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_chunked_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_empty_gif_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_fastcgi_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_geo_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_gzip_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_headers_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_index_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_limit_req_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_limit_zone_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_log_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_map_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_memcached_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_not_modified_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_proxy_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_range_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_referer_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_rewrite_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_scgi_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_split_clients_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_ssi_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_static_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_upstream_ip_hash_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_userid_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_uwsgi_module.c" />
+    <ClCompile Include="src\http\ngx_http.c" />
+    <ClCompile Include="src\http\ngx_http_busy_lock.c" />
+    <ClCompile Include="src\http\ngx_http_copy_filter_module.c" />
+    <ClCompile Include="src\http\ngx_http_core_module.c" />
+    <ClCompile Include="src\http\ngx_http_file_cache.c" />
+    <ClCompile Include="src\http\ngx_http_header_filter_module.c" />
+    <ClCompile Include="src\http\ngx_http_parse.c" />
+    <ClCompile Include="src\http\ngx_http_parse_time.c" />
+    <ClCompile Include="src\http\ngx_http_postpone_filter_module.c" />
+    <ClCompile Include="src\http\ngx_http_request.c" />
+    <ClCompile Include="src\http\ngx_http_request_body.c" />
+    <ClCompile Include="src\http\ngx_http_script.c" />
+    <ClCompile Include="src\http\ngx_http_special_response.c" />
+    <ClCompile Include="src\http\ngx_http_upstream.c" />
+    <ClCompile Include="src\http\ngx_http_upstream_round_robin.c" />
+    <ClCompile Include="src\http\ngx_http_variables.c" />
+    <ClCompile Include="src\http\ngx_http_write_filter_module.c" />
+    <ClCompile Include="src\mail\ngx_mail.c" />
+    <ClCompile Include="src\mail\ngx_mail_auth_http_module.c" />
+    <ClCompile Include="src\mail\ngx_mail_core_module.c" />
+    <ClCompile Include="src\mail\ngx_mail_handler.c" />
+    <ClCompile Include="src\mail\ngx_mail_imap_handler.c" />
+    <ClCompile Include="src\mail\ngx_mail_imap_module.c" />
+    <ClCompile Include="src\mail\ngx_mail_parse.c" />
+    <ClCompile Include="src\mail\ngx_mail_pop3_handler.c" />
+    <ClCompile Include="src\mail\ngx_mail_pop3_module.c" />
+    <ClCompile Include="src\mail\ngx_mail_proxy_module.c" />
+    <ClCompile Include="src\mail\ngx_mail_smtp_handler.c" />
+    <ClCompile Include="src\mail\ngx_mail_smtp_module.c" />
+    <ClCompile Include="src\misc\ngx_cpp_test_module.cpp" />
+    <ClCompile Include="src\misc\ngx_google_perftools_module.c" />
+    <ClCompile Include="src\os\unix\ngx_alloc.c" />
+    <ClCompile Include="src\os\unix\ngx_channel.c" />
+    <ClCompile Include="src\os\unix\ngx_daemon.c" />
+    <ClCompile Include="src\os\unix\ngx_errno.c" />
+    <ClCompile Include="src\os\unix\ngx_files.c" />
+    <ClCompile Include="src\os\unix\ngx_linux_init.c" />
+    <ClCompile Include="src\os\unix\ngx_linux_sendfile_chain.c" />
+    <ClCompile Include="src\os\unix\ngx_posix_init.c" />
+    <ClCompile Include="src\os\unix\ngx_process.c" />
+    <ClCompile Include="src\os\unix\ngx_process_cycle.c" />
+    <ClCompile Include="src\os\unix\ngx_readv_chain.c" />
+    <ClCompile Include="src\os\unix\ngx_recv.c" />
+    <ClCompile Include="src\os\unix\ngx_send.c" />
+    <ClCompile Include="src\os\unix\ngx_setproctitle.c" />
+    <ClCompile Include="src\os\unix\ngx_shmem.c" />
+    <ClCompile Include="src\os\unix\ngx_socket.c" />
+    <ClCompile Include="src\os\unix\ngx_time.c" />
+    <ClCompile Include="src\os\unix\ngx_udp_recv.c" />
+    <ClCompile Include="src\os\unix\ngx_user.c" />
+    <ClCompile Include="src\os\unix\ngx_writev_chain.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="debug.mak" />
+    <None Include="release.mak" />
+    <None Include="nginx-Debug.vgdbsettings" />
+    <None Include="nginx-Release.vgdbsettings" />
+    <None Include="src\os\unix\ngx_sunpro_amd64.il" />
+    <None Include="src\os\unix\ngx_sunpro_sparc64.il" />
+    <None Include="src\os\unix\ngx_sunpro_x86.il" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config\ngx_auto_config.h" />
+    <ClInclude Include="config\ngx_auto_headers.h" />
+    <ClInclude Include="src\core\nginx.h" />
+    <ClInclude Include="src\core\ngx_array.h" />
+    <ClInclude Include="src\core\ngx_buf.h" />
+    <ClInclude Include="src\core\ngx_config.h" />
+    <ClInclude Include="src\core\ngx_conf_file.h" />
+    <ClInclude Include="src\core\ngx_connection.h" />
+    <ClInclude Include="src\core\ngx_core.h" />
+    <ClInclude Include="src\core\ngx_crc.h" />
+    <ClInclude Include="src\core\ngx_crc32.h" />
+    <ClInclude Include="src\core\ngx_crypt.h" />
+    <ClInclude Include="src\core\ngx_cycle.h" />
+    <ClInclude Include="src\core\ngx_file.h" />
+    <ClInclude Include="src\core\ngx_hash.h" />
+    <ClInclude Include="src\core\ngx_inet.h" />
+    <ClInclude Include="src\core\ngx_list.h" />
+    <ClInclude Include="src\core\ngx_log.h" />
+    <ClInclude Include="src\core\ngx_md5.h" />
+    <ClInclude Include="src\core\ngx_murmurhash.h" />
+    <ClInclude Include="src\core\ngx_open_file_cache.h" />
+    <ClInclude Include="src\core\ngx_palloc.h" />
+    <ClInclude Include="src\core\ngx_parse.h" />
+    <ClInclude Include="src\core\ngx_queue.h" />
+    <ClInclude Include="src\core\ngx_radix_tree.h" />
+    <ClInclude Include="src\core\ngx_rbtree.h" />
+    <ClInclude Include="src\core\ngx_regex.h" />
+    <ClInclude Include="src\core\ngx_resolver.h" />
+    <ClInclude Include="src\core\ngx_sha1.h" />
+    <ClInclude Include="src\core\ngx_shmtx.h" />
+    <ClInclude Include="src\core\ngx_slab.h" />
+    <ClInclude Include="src\core\ngx_string.h" />
+    <ClInclude Include="src\core\ngx_times.h" />
+    <ClInclude Include="src\event\ngx_event.h" />
+    <ClInclude Include="src\event\ngx_event_busy_lock.h" />
+    <ClInclude Include="src\event\ngx_event_connect.h" />
+    <ClInclude Include="src\event\ngx_event_pipe.h" />
+    <ClInclude Include="src\event\ngx_event_posted.h" />
+    <ClInclude Include="src\event\ngx_event_timer.h" />
+    <ClInclude Include="src\http\modules\ngx_http_ssi_filter_module.h" />
+    <ClInclude Include="src\http\ngx_http.h" />
+    <ClInclude Include="src\http\ngx_http_busy_lock.h" />
+    <ClInclude Include="src\http\ngx_http_cache.h" />
+    <ClInclude Include="src\http\ngx_http_config.h" />
+    <ClInclude Include="src\http\ngx_http_core_module.h" />
+    <ClInclude Include="src\http\ngx_http_request.h" />
+    <ClInclude Include="src\http\ngx_http_script.h" />
+    <ClInclude Include="src\http\ngx_http_upstream.h" />
+    <ClInclude Include="src\http\ngx_http_upstream_round_robin.h" />
+    <ClInclude Include="src\http\ngx_http_variables.h" />
+    <ClInclude Include="src\mail\ngx_mail.h" />
+    <ClInclude Include="src\mail\ngx_mail_imap_module.h" />
+    <ClInclude Include="src\mail\ngx_mail_pop3_module.h" />
+    <ClInclude Include="src\mail\ngx_mail_smtp_module.h" />
+    <ClInclude Include="src\os\unix\ngx_alloc.h" />
+    <ClInclude Include="src\os\unix\ngx_atomic.h" />
+    <ClInclude Include="src\os\unix\ngx_channel.h" />
+    <ClInclude Include="src\os\unix\ngx_errno.h" />
+    <ClInclude Include="src\os\unix\ngx_files.h" />
+    <ClInclude Include="src\os\unix\ngx_gcc_atomic_amd64.h" />
+    <ClInclude Include="src\os\unix\ngx_gcc_atomic_ppc.h" />
+    <ClInclude Include="src\os\unix\ngx_gcc_atomic_sparc64.h" />
+    <ClInclude Include="src\os\unix\ngx_gcc_atomic_x86.h" />
+    <ClInclude Include="src\os\unix\ngx_linux.h" />
+    <ClInclude Include="src\os\unix\ngx_linux_config.h" />
+    <ClInclude Include="src\os\unix\ngx_os.h" />
+    <ClInclude Include="src\os\unix\ngx_posix_config.h" />
+    <ClInclude Include="src\os\unix\ngx_process.h" />
+    <ClInclude Include="src\os\unix\ngx_process_cycle.h" />
+    <ClInclude Include="src\os\unix\ngx_setproctitle.h" />
+    <ClInclude Include="src\os\unix\ngx_shmem.h" />
+    <ClInclude Include="src\os\unix\ngx_socket.h" />
+    <ClInclude Include="src\os\unix\ngx_sunpro_atomic_sparc64.h" />
+    <ClInclude Include="src\os\unix\ngx_thread.h" />
+    <ClInclude Include="src\os\unix\ngx_time.h" />
+    <ClInclude Include="src\os\unix\ngx_user.h" />
+  </ItemGroup>
+</Project>
